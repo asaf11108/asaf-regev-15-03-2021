@@ -2,7 +2,7 @@ import './App.scss';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
 import Button from '@material-ui/core/Button';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Button variant="contained" color="primary">
             Hello World
           </Button>
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <img src={logo} className="App-logo" alt="logo" />
         </div>
       </div>
     </ThemeProvider>
