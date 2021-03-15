@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/asaf-regev-06-03-2021/static/css/main.d81b8125.chunk.css",
+    "main.js": "/asaf-regev-06-03-2021/static/js/main.32db1206.chunk.js",
+    "main.js.map": "/asaf-regev-06-03-2021/static/js/main.32db1206.chunk.js.map",
+    "runtime-main.js": "/asaf-regev-06-03-2021/static/js/runtime-main.7c142cdd.js",
+    "runtime-main.js.map": "/asaf-regev-06-03-2021/static/js/runtime-main.7c142cdd.js.map",
+    "static/js/2.182cf210.chunk.js": "/asaf-regev-06-03-2021/static/js/2.182cf210.chunk.js",
+    "static/js/2.182cf210.chunk.js.map": "/asaf-regev-06-03-2021/static/js/2.182cf210.chunk.js.map",
+    "static/js/3.c5903459.chunk.js": "/asaf-regev-06-03-2021/static/js/3.c5903459.chunk.js",
+    "static/js/3.c5903459.chunk.js.map": "/asaf-regev-06-03-2021/static/js/3.c5903459.chunk.js.map",
+    "index.html": "/asaf-regev-06-03-2021/index.html",
+    "static/css/main.d81b8125.chunk.css.map": "/asaf-regev-06-03-2021/static/css/main.d81b8125.chunk.css.map",
+    "static/js/2.182cf210.chunk.js.LICENSE.txt": "/asaf-regev-06-03-2021/static/js/2.182cf210.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c142cdd.js",
+    "static/js/2.182cf210.chunk.js",
+    "static/css/main.d81b8125.chunk.css",
+    "static/js/main.32db1206.chunk.js"
+  ]
+}
