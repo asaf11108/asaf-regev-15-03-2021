@@ -1,8 +1,8 @@
 import './App.scss';
 import { ThemeProvider } from '@material-ui/core/styles';
-import theme from './theme';
+import theme from '../theme';
 import Button from '@material-ui/core/Button';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 
 export const App: React.FC = () => {
   return (
