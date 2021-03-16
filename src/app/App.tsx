@@ -1,19 +1,26 @@
 import './App.scss';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../theme';
-import Button from '@material-ui/core/Button';
-import logo from '../assets/logo.svg';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import Home from '../components/Home/Home';
+import Favorites from '../components/Favorites/Favorites';
 
 export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <div className="content">
-          <h1>App component</h1>
-          <Button variant="contained" color="primary">
-            Hello World
-          </Button>
-          <img src={logo} className="App-logo" alt="logo" />
+      <div className="app__content-wrapper">
+        <div className="app__content">
+          <Router>
+            <Switch>
+              <Route path="/home">
+                <Home />
+              </Route>
+              <Route path="/favorites">
+                <Favorites />
+              </Route>
+              <Redirect to={{ pathname: "/home" }}/>
+            </Switch>
+          </Router>
         </div>
       </div>
     </ThemeProvider>
