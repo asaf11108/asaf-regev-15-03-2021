@@ -1,11 +1,11 @@
-@import '../styles/vendors/vendors';
+@use '../styles/vendors/vendors';
 $toolbar-height: 64px;
 $toolbar-height-mobile: 56px;
 
 .app {
     &__content {
-        @include spread(margin, 10px 0, 50px 0);
-        @include spread(width, 90vw, 50vw);
+        // @include vendors.spread(margin, 10px 0, 50px 0);
+        // @include vendors.spread(width, 90vw, 50vw);
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -18,7 +18,7 @@ $toolbar-height-mobile: 56px;
         background-size: cover;
         box-sizing: border-box;
         min-height: calc(100vh - #{$toolbar-height});
-        @include media('<=xs') {
+        @include vendors.media('<=xs') {
             min-height: calc(100vh - #{$toolbar-height-mobile});
         }
         display: flex;
