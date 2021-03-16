@@ -4,7 +4,7 @@ import theme from './theme';
 import Button from '@material-ui/core/Button';
 import logo from './logo.svg';
 
-function App() {
+export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
@@ -20,4 +20,3 @@ function App() {
   );
 }
 
-export default App;
