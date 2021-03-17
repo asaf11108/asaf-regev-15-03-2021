@@ -4,7 +4,14 @@ import MuiToolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
-import ToolbarMenuItems from '../ToolbarMenuItems/ToolbarMenuItems';
+import MenuItem from '@material-ui/core/MenuItem';
+import Button from '@material-ui/core/Button';
+import { NavLink } from "react-router-dom";
+
+interface IMenuItem {
+  label: string;
+  navigatePath: string
+};
 
 const Toolbar: React.FC = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -17,6 +24,17 @@ const Toolbar: React.FC = () => {
     setAnchorEl(null);
   };
 
+  const menuItems: IMenuItem[] = [
+    {
+      label: 'Home',
+      navigatePath: '/home'
+    },
+    {
+      label: 'Favorites',
+      navigatePath: '/favorites'
+    }
+  ];
+
   return (
     <MuiToolbar className="toolbar">
       <span className="toolbar__title">
@@ -26,7 +44,20 @@ const Toolbar: React.FC = () => {
       </span>
 
       <span className="toolbar__actions">
-        <ToolbarMenuItems></ToolbarMenuItems>
+        {
+          menuItems.map((menuItem, index) => (
+            <Button
+              exact
+              key={index}
+              to={menuItem.navigatePath}
+              style={{ textTransform: 'capitalize' }}
+              activeClassName="MuiButton-containedPrimary"
+              component={NavLink}
+            >
+              {menuItem.label}
+            </Button>
+          ))
+        }
       </span>
 
       <span className="toolbar__actions--mobile">
@@ -40,7 +71,19 @@ const Toolbar: React.FC = () => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <ToolbarMenuItems handleClose={handleClose} menuPopup={true}></ToolbarMenuItems>
+          {
+            menuItems.map((menuItem, index) => (
+              <MenuItem
+                onClick={handleClose}
+                key={index}
+                to={menuItem.navigatePath}
+                activeClassName="Mui-selected"
+                component={NavLink}
+              >
+                {menuItem.label}
+              </MenuItem>
+            ))
+          }
         </Menu>
       </span >
 
