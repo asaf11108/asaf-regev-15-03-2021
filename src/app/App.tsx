@@ -2,15 +2,19 @@ import './App.scss';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../theme';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import Toolbar from '../components/Toolbar/Toolbar';
 import Home from '../components/Home/Home';
 import Favorites from '../components/Favorites/Favorites';
 
 export const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="app__content-wrapper">
-        <div className="app__content">
-          <Router>
+      <Router>
+        <Toolbar></Toolbar>
+
+        <div className="app__content-wrapper">
+          <div className="app__content">
+
             <Switch>
               <Route path="/home">
                 <Home />
@@ -18,11 +22,12 @@ export const App: React.FC = () => {
               <Route path="/favorites">
                 <Favorites />
               </Route>
-              <Redirect to={{ pathname: "/home" }}/>
+              <Redirect to={{ pathname: "/home" }} />
             </Switch>
-          </Router>
+
+          </div>
         </div>
-      </div>
+      </Router>
     </ThemeProvider>
   );
 }
