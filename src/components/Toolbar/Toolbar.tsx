@@ -87,15 +87,6 @@ const Toolbar: React.FC = () => {
         </Menu>
       </span >
 
-      {/* <ng #menuActions>
-    <button mat-flat-button [routerLink]="['home']" [routerLinkActive]="['mat-primary']">
-      Home
-    </button>
-    <button mat-flat-button [routerLink] = "['favorits']"[routerLinkActive] = "['mat-primary']"
-[disabled] = "isLoading$ | async" >
-  Favorites
-    </button >
-  </ng - template > */}
     </MuiToolbar >
   )
 };
